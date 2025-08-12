@@ -23,7 +23,8 @@
     "@polkadot/api-contract": "^16.4.3",
     "@polkadot/keyring": "^13.5.4",
     "@polkadot/types": "^16.4.3",
-    "polkadot-api": "^1.9.5"
+    "polkadot-api": "^1.9.5",
+    "ethers": "^6.15.0"
   },
   "devDependencies": {
     "@types/node": "^24.1.0",

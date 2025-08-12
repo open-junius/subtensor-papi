@@ -1,22 +1,8 @@
-import { mainnet, MultiAddress } from '@polkadot-api/descriptors';
-import { TypedApi, TxCallData, createClient } from 'polkadot-api';
-import { getWsProvider } from 'polkadot-api/ws-provider/web';
-
-
-const SUBTENSOR_MAINNET_ENDPOINT = 'wss://entrypoint-finney.opentensor.ai:443';
-
+import { ethers } from 'ethers';
+const URL = "https://lite.chain.opentensor.ai"
 async function main() {
-    const provider = getWsProvider(SUBTENSOR_MAINNET_ENDPOINT);
-    const client = createClient(provider);
-
-    // let client = await getClient()
-    const api = client.getTypedApi(mainnet)
-
-    const netuid = 39;
-
-    const emission = await api.query.SubtensorModule.Emission.getValue(netuid);
-
-    console.log(emission);
+    const provider = new ethers.JsonRpcProvider(URL);
+    const balance = await provider.getBalance("0xef395b0C8Dae290aFe48C0C05DC5e2B063E19771");
+    console.log(balance);
 }
-
 main().catch(console.error);
