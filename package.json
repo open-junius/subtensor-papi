@@ -23,7 +23,10 @@
     "@polkadot/api-contract": "^16.4.3",
     "@polkadot/keyring": "^13.5.4",
     "@polkadot/types": "^16.4.3",
+    "@polkadot-labs/hdkd-helpers": "^0.21.0",
     "polkadot-api": "^1.9.5",
+    "viem": "^2.25.1",
+    "@polkadot/util-crypto": "^13.5.4",
     "ethers": "^6.15.0"
   },
   "devDependencies": {
